@@ -163,17 +163,54 @@ public class Solution {
 
 
 
+//if you function does not take variable then only the instance variabl will be printed
+
+import java.util.*;
+
+class Animals{
+    int legs=4;
+    public void walk(){
+        System.out.println(legs);            //prints 4
+        System.out.println(this.legs);       //prints 4
+    }
+
+}
+
+public class Solution{
+    public static void main(String args[]){
+        Animals cow = new Animals();
+        cow.walk();
+    }
+}
 
 
+//to change this you have to intialize new variable inside function
 
+import java.util.*;
 
+class Animals{
+    int legs=4;
+    public void walk(){
+        int legs = 100;                   //variable intialized inside function
+        System.out.println(legs);         //prints 100
+        System.out.println(this.legs);    //prints 4
+    }
+
+}
+
+public class Solution{
+    public static void main(String args[]){
+        Animals cow = new Animals();
+        cow.walk();
+    }
+}
 
 
 
 
 
                                                                           
-                                                                           **//polymorphism** 
+                                                                           *//polymorphism*
 
 
 // 1) Compile time polymorphism 
