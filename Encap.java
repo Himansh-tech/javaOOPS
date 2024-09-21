@@ -159,11 +159,13 @@
     import java.util.*;
 
     class priClass{
+        //this is private class
         private class subPriClass{
             public int sum(int a, int b){
                 return a+b;
             }
         }
+        //made a function to access private class
         public void execute(){
             subPriClass add = new subPriClass();
             System.out.println(add.sum(5,3));
@@ -174,6 +176,8 @@
 public class Encap {
 
     public static void main(String[] args) {
+
+        //calling our super class and it's method to therby access private class
         priClass pri = new priClass();
         pri.execute();
         
